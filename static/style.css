@@ -1,0 +1,124 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f6f8;
+    color: #333;
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0px 6px 20px rgba(0,0,0,0.15);
+    text-align: center;
+}
+
+h1 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+textarea {
+    width: 100%;
+    height: 150px;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    resize: vertical;
+    font-size: 14px;
+    box-sizing: border-box;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+textarea:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 10px rgba(52,152,219,0.3);
+    outline: none;
+}
+
+button {
+    margin-top: 15px;
+    padding: 12px 25px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #2980b9;
+    transform: scale(1.05);
+}
+
+/* Prediction and summary sections */
+.result-section, .summary-section {
+    margin-top: 25px;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: left;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.result-section.real {
+    border-left: 6px solid #27ae60;
+    background-color: #eafaf1;
+}
+
+.result-section.fake {
+    border-left: 6px solid #e74c3c;
+    background-color: #fdecea;
+}
+
+.summary-section {
+    background-color: #ecf0f1;
+    cursor: pointer;
+}
+
+.result-section h2, .summary-section h2 {
+    margin-top: 0;
+    color: #2c3e50;
+}
+
+.result-section p, .summary-section p {
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+/* Confidence bar */
+.confidence-bar {
+    background-color: #dfe6e9;
+    border-radius: 8px;
+    margin-top: 10px;
+    width: 100%;
+    height: 25px;
+    overflow: hidden;
+}
+
+.confidence-fill {
+    height: 100%;
+    line-height: 25px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.confidence-fill.real {
+    background-color: #27ae60; /* green for real */
+}
+
+.confidence-fill.fake {
+    background-color: #e74c3c; /* red for fake */
+}
