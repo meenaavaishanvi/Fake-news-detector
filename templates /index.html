@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fake News Detector for Students</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>📰 Fake News Detector</h1>
+        <p class="subtitle">Paste any news article below to check if it is real or fake, and see a summary.</p>
+
+        <form method="POST">
+            <textarea name="news" placeholder="Paste news article here..." required></textarea><br>
+            <button type="submit">Check News</button>
+        </form>
+
+        {% if result %}
+            <div class="result-section {{ 'real' if 'REAL' in result else 'fake' }}">
+                <h2>Prediction</h2>
+                <p>{{ result }}</p>
+            </div>
+        {% endif %}
+
+        {% if summary %}
+            <div class="summary-section">
+                <h2>Summary</h2>
+                <p>{{ summary }}</p>
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>
